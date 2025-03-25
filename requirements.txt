@@ -1,2 +1,14 @@
+python-dotenv
 langchain
-langchain-ollama
+
+# OpenAI APIを利用する場合には、コメントアクティベート
+# openai
+# langchain-openai
+
+# Gemini APIを利用する場合には、コメントアクティベート
+google-genai
+langchain-google-genai
+
+# Ollamaを利用する場合には、コメントアクティベート
+# ollama
+# langchain-ollama

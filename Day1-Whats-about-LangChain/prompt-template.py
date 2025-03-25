@@ -1,9 +1,16 @@
-from langchain_ollama import ChatOllama
 from langchain_core.prompts import PromptTemplate
+
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 def res_langchain(user_question: str) -> str:
     # LLMの初期化
-    llm = ChatOllama(model = "llama3")
+    # from langchain_ollama import ChatOllama
+    # llm = ChatOllama(model = "llama3")
+    
+    from langchain_google_genai import ChatGoogleGenerativeAI
+    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 
     # プロンプトテンプレートの作成
     template = PromptTemplate.from_template("あなたは{role}です。次の質問に答えてください。{prompt}")
